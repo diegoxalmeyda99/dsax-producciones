@@ -1,0 +1,188 @@
+.hero {
+  position: relative;
+  min-height: 70vh;
+  background: linear-gradient(to bottom, #f3e6c9, #ffffff);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  text-align: center;
+  padding-top: 50px;
+}
+
+/* LOGO ARRIBA CENTRADO */
+.top-logo {
+  position: absolute;
+  top: 110px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 3;
+}
+
+.top-logo img {
+  height: 100px;
+  filter: drop-shadow(0 4px 10px rgba(0,0,0,0.2));
+}
+
+/* CENTRO */
+.hero-center {
+  position: relative;
+  z-index: 2;
+  margin-top: 50px;
+}
+
+/* TITULO */
+.title-img {
+  max-width: 700px;
+  width: 100%;
+  margin-bottom: 10px;
+  margin-top: 60px; 
+}
+
+/* SUBTEXTO */
+.subtitle {
+  font-family: 'Great Vibes', cursive;
+  font-size: 3.5rem;
+  color: #5a2d0c;
+  margin-bottom: 10px;
+  letter-spacing: 1px;
+  margin-top: 10px; 
+}
+
+/* CONTACTO */
+.contact-bar {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+/* 🔥 BOTONES BASE */
+.contact-btn,
+.social {
+  display: flex;
+  align-items: stretch; /* 👈 CLAVE */
+  border-radius: 12px;
+  overflow: hidden;
+  border: 2px solid #c9a227;
+}
+.contact-btn,
+.contact-btn * {
+  text-decoration: none !important;
+}
+
+/* ICONO WHATSAPP */
+.contact-btn .icon {
+  background: #c9a227;
+  color: white;
+  padding: 0 18px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+}
+
+/* TEXTO TELÉFONO */
+.contact-btn .text {
+  display: flex;
+  align-items: center;
+  padding: 0 20px;
+  color: #c9a227;
+  font-weight: bold;
+}
+
+/* USUARIO */
+.social .user {
+  display: flex;
+  align-items: center;
+  padding: 0 20px;
+  color: #c9a227;
+  font-weight: bold;
+}
+
+/* ICONOS DERECHA */
+.social .icons {
+  background: #c9a227;
+  color: white;
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  padding: 0 18px;
+}
+
+/* ICONOS */
+.icons i,
+.contact-btn i {
+  font-size: 18px;
+}
+
+/* HOVER PRO 🔥 */
+.contact-btn:hover,
+.social:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 15px rgba(201,162,39,0.3);
+  transition: 0.3s;
+}
+
+/* IMAGEN DERECHA */
+.right-img {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  max-height: 90%;
+  transform: translateX(10%);
+  opacity: 0.95;
+  z-index: 1;
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+  .right-img {
+    display: none;
+  }
+
+  .title-img {
+    max-width: 500px;
+  }
+
+  .top-logo img {
+    height: 55px;
+  }
+}
+
+
+.about {
+  background: #0a0a0a;
+  color: #fff;
+  padding: 80px 20px;
+  text-align: center;
+}
+
+.about-container {
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.about-title {
+  font-size: 2.5rem;
+  color: #c9a227;
+  margin-bottom: 30px;
+}
+
+.about p {
+  font-size: 1.1rem;
+  line-height: 1.8;
+  margin-bottom: 20px;
+  color: #ddd;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .about-title {
+    font-size: 2rem;
+  }
+
+  .about p {
+    font-size: 1rem;
+  }
+}

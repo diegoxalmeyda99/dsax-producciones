@@ -1,0 +1,61 @@
+<section class="repertorio">
+  <div class="repertorio-container">
+
+    <h2 class="repertorio-title">Repertorio</h2>
+    <p class="repertorio-subtitle">
+      Adaptamos nuestra música a cada momento especial
+    </p>
+
+    <div class="repertorio-grid">
+
+        <div class="repertorio-card" (click)="openModal('latin')">
+        <h3>🎷 Latin Pop</h3>
+        <p>Éxitos modernos y clásicos en versión instrumental</p>
+        </div>
+
+        <div class="repertorio-card" (click)="openModal('bachata')">
+        <h3>💃 Bachata & Cumbia</h3>
+        <p>Ritmos alegres ideales para celebraciones</p>
+        </div>
+
+        <div class="repertorio-card" (click)="openModal('balada')">
+        <h3>❤️ Baladas & Boleros</h3>
+        <p>Perfecto para momentos románticos</p>
+        </div>
+
+        <div class="repertorio-card" (click)="openModal('rock')">
+        <h3>🎸 Rock & Pop</h3>
+        <p>Versiones elegantes de clásicos conocidos</p>
+        </div>
+
+        <div class="repertorio-card" (click)="openModal('cumbia')">
+        <h3>🌴 Cumbia Tropical</h3>
+        <p>Ambiente festivo y lleno de energía</p>
+        </div>
+
+        <div class="repertorio-card" (click)="openModal('personalizado')">
+        <h3>✨ Personalizado</h3>
+        <p>Preparamos canciones especiales para tu evento</p>
+        </div>
+
+    </div>
+
+  </div>
+</section>
+
+<!-- MODAL -->
+<div class="modal" *ngIf="showModal" (click)="closeModal()">
+  <div class="modal-content" (click)="$event.stopPropagation()">
+
+    <span class="close" (click)="closeModal()">✖</span>
+
+    <h3>{{ currentTitle }}</h3>
+
+    <ul>
+      <li *ngFor="let song of currentSongs">
+        {{ song }}
+      </li>
+    </ul>
+
+  </div>
+</div>

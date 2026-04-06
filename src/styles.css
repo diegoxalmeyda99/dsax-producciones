@@ -1,1 +1,42 @@
-/* You can add global styles to this file, and also import other style files */
+@import url('https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap');
+
+:root {
+  --gold: #D4AF37;
+  --dark-gold: #A67C00;
+  --brown: #3B1F0B;
+  --black: #0D0D0D;
+  --white: #FFFFFF;
+}
+
+body {
+  margin: 0;
+  font-family: 'Segoe UI', sans-serif;
+  background-color: var(--black);
+  color: var(--white);
+}
+
+/* Utilidades */
+.container {
+  width: 90%;
+  max-width: 1200px;
+  margin: auto;
+}
+
+.text-gold {
+  color: var(--gold);
+}
+
+.btn-gold {
+  background: var(--gold);
+  color: black;
+  padding: 12px 24px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+.btn-gold:hover {
+  background: var(--dark-gold);
+}
